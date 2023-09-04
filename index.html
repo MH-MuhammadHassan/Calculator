@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+    <!--main container -->
+    <div class="container">
+        <input type="text" id="display" />
+  
+        <!-- buttons -->
+        <div class="buttons">
+       
+          <button onclick="getvalues(1)">1</button>
+          <button onclick="getvalues(2)">2</button>
+          <button onclick="getvalues(3)">3</button>
+          <button class="operator" onclick="getvalues('+')">+</button>
+
+
+          <button onclick="getvalues(4)">4</button>
+          <button onclick="getvalues(5)">5</button>
+          <button onclick="getvalues(6)">6</button>
+          <button class="operator" onclick="getvalues('-')">-</button>
+
+
+          <button onclick="getvalues(7)">7</button>
+          <button onclick="getvalues(8)">8</button>
+          <button onclick="getvalues(9)">9</button>
+          <button class="operator" onclick="getvalues('*')">*</button>
+
+
+          <button onclick="getvalues('0')">0</button>
+          <button class="operator" onclick="cleardisplay()">C</button>
+          <button onclick="calculateresult()">=</button>
+          <button class="operator" onclick="getvalues('/')">/</button>
+
+        </div>
+      </div>
+</body>
+<script src="./app.js"></script>
+</html>
