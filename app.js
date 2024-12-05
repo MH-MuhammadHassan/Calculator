@@ -1,18 +1,27 @@
-let display = document.getElementById('display');
+const display = document.getElementById("display");
 
-function getvalues(value){
-    display.value +=value;
-}
-
-function cleardisplay(){
-    display.value="";
-}
-
-function calculateresult(){
-    try{                     // The try statement defines a code block to run (to try).
-        display.value=eval(display.value);      //eval ("2+2")=4
+// Append a value to the display
+function appendValue(value) {
+    const lastChar = display.value.slice(-1);
+    // Prevent adding multiple consecutive operators
+    if (["+", "-", "*", "/"].includes(value) && ["+", "-", "*", "/"].includes(lastChar)) {
+        return;
     }
-    catch(error){         // The catch statement defines a code block to handle any error.
-        display.value=error;
+    display.value += value;
+}
+
+// Clear the display
+function clearDisplay() {
+    display.value = "";
+}
+
+// Calculate the result of the expression
+function calculateResult() {
+    try {
+        // Safely evaluate the mathematical expression
+        const result = new Function(`return ${display.value}`)();
+        display.value = result;
+    } catch {
+        display.value = "Error";
     }
 }

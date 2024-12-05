@@ -1,51 +1,80 @@
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Body Styling */
 body {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #e0e3eb;
+  font-family: Arial, sans-serif;
 }
+
+/* Calculator Container */
 .container {
   position: relative;
   max-width: 300px;
   width: 100%;
   border-radius: 12px;
-  padding: 10px 20px 20px;
-  background: rgb(38, 40, 163);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  background: #2628a3;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Display Styling */
 #display {
   height: 80px;
   width: 100%;
   outline: none;
   border: none;
   text-align: right;
-  margin-bottom: 10px;
-  font-size: 25px;
-  color: #000e1a;
+  font-size: 1.5rem;
+  color: #040f39;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 10px;
   pointer-events: none;
 }
+
+/* Buttons Grid */
 .buttons {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
+  margin-top: 20px;
 }
+
+/* Button Styling */
 .buttons button {
-  padding: 10px;
+  padding: 15px;
   border-radius: 6px;
   border: none;
-  font-size: 20px;
+  font-size: 1.2rem;
   cursor: pointer;
   background-color: #eee;
+  transition: all 0.3s ease;
 }
+
+/* Button Active and Hover States */
+.buttons button:hover {
+  background-color: #ccc;
+}
+
 .buttons button:active {
-  transform: scale(0.99);
+  transform: scale(0.95);
 }
+
+/* Operator Button Styling */
 .operator {
-  color: #e71111;
+  background-color: #f44;
+  color: #000000;
+}
+
+.operator:hover {
+  background-color: #c33;
 }

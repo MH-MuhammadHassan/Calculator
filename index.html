@@ -4,44 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  
-    <!--main container -->
+    <!-- Main Container -->
     <div class="container">
-        <input type="text" id="display" />
-  
-        <!-- buttons -->
+        <!-- Display -->
+        <input 
+            type="text" 
+            id="display" 
+            placeholder="0" 
+            readonly 
+            aria-label="Calculator display"
+        />
+
+        <!-- Buttons -->
         <div class="buttons">
-       
-          <button onclick="getvalues(1)">1</button>
-          <button onclick="getvalues(2)">2</button>
-          <button onclick="getvalues(3)">3</button>
-          <button class="operator" onclick="getvalues('+')">+</button>
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button class="operator" onclick="appendValue('+')">+</button>
 
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button class="operator" onclick="appendValue('-')">-</button>
 
-          <button onclick="getvalues(4)">4</button>
-          <button onclick="getvalues(5)">5</button>
-          <button onclick="getvalues(6)">6</button>
-          <button class="operator" onclick="getvalues('-')">-</button>
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button class="operator" onclick="appendValue('*')">*</button>
 
-
-          <button onclick="getvalues(7)">7</button>
-          <button onclick="getvalues(8)">8</button>
-          <button onclick="getvalues(9)">9</button>
-          <button class="operator" onclick="getvalues('*')">*</button>
-
-
-          <button onclick="getvalues('0')">0</button>
-          <button class="operator" onclick="cleardisplay()">C</button>
-          <button onclick="calculateresult()">=</button>
-          <button class="operator" onclick="getvalues('/')">/</button>
-
+            <button onclick="appendValue('0')">0</button>
+            <button class="operator" onclick="clearDisplay()">C</button>
+            <button onclick="calculateResult()">=</button>
+            <button class="operator" onclick="appendValue('/')">/</button>
         </div>
-      </div>
+    </div>
+    <script src="./app.js"></script>
 </body>
-<script src="./app.js"></script>
 </html>
